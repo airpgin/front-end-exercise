@@ -115,7 +115,7 @@ header .logo {
   flex-wrap: wrap;
   background-color: #fff;
   padding: 30px 50px;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
