@@ -1,93 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的训练场</title>
-</head>
-<body>
-<h1>我的训练场</h1>
-<h2>漂亮设计</h2>
-<a href="./winter-discount">Winter Discount</a>
-<br />
-<a href="./suzuki">Suzuki</a>
-<br />
-<a href="./planet-x">Planet X</a>
-<br />
-<a href="./member-introduction">Member Introduction</a>
-<br />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的试炼场</title>
+    <style>
+      :root {
+        box-sizing: border-box;
+      }
 
-<h2>响应式布局</h2>
-<a href="./facebook">Facebook</a>
-<br />
-<a href="./picture-show">Picture Show</a>
-<br />
-<a href="./starbucks">Starbucks</a>
-<br />
-<a href="./kfc">KFC</a>
-<br />
-<a href="./travel">Travel</a>
-<br />
+      *,
+      ::after,
+      ::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
 
-<h2>音乐播放器</h2>
+      body {
+        font-family: sans-serif;
+        background-color: rgb(241, 251, 255);
+      }
+      .img {
+        width: 300px;
+      }
+      .note {
+        font-size: 2em;
+        color: rgb(169, 2, 2);
+      }
+      .iqtest {
+        font-size: 1.5em;
+      }
+      .row {
+        display: flex;
+        overflow-y: auto;
+        padding: 18px;
+        list-style-type: none;
+      }
 
-<a href="./simple-music-player">Simple Music Player</a>
-<br />
-<a href="./music-player">Music Player</a>
-<br />
+      .row-item {
+        margin-right: 2em;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform 0.3s ease-in-out;
+      }
 
-<h2>卡片</h2>
-<a href="./bank-card-001">Bank Card 001</a>
-<br />
-<a href="./glass-card">Glass Card</a>
-<br />
-<a href="./people-card">People Card</a>
-<br />
-<a href="./dropdown-menu">Dropdown Menu</a>
-<br />
+      .row-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      }
 
-<h2>Button</h2>
-<a href="./glow-button">Glow Button</a>
-<br />
+      .title {
+        text-align: center;
+      }
 
-<h2>效果</h2>
-<a href="./dew">Dew</a>
-<br />
-<a href="./electric-light">Electric Light</a>
-<br />
-<a href="./text-circle-rotate-animations">text-circle-rotate-animations</a>
-<br />
-<img src="images/2.gif" width="300" alt="">
-<a href="./hover-option">Hover Option</a>
-<br />
-<img src="images/1.gif" width="300" alt="">
-<a href="./sortable-list">Sortable List</a>
-<br />
+      h2.title {
+        margin-top: 120px;
+      }
 
-<h2>彩色阴影</h2>
-<a href="./gradient-drop-shadow">Gradient Drop Shadow</a>
-<br />
+      .px2 {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">我的试炼场</h1>
+    <p class="px2">
+      <span class="note">注</span>：因我电脑比较老旧,
+      演示动画看起来可能效果不佳，点击演示动画下方的链接即可体验实际效果
+      (需要您的设备接入互联网)。
+    </p>
+    <p class="px2">
+      如果您无法打开这个链接(<a class="iqtest" href="https://www.google.com"
+        >www.google.com</a
+      >)，则表示您尚未接入互联网，请在技术部门同事帮助下打开～～
+    </p>
+    <h2 class="title">响应式布局</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/0005.gif" class="img" alt="" />
+        <a href="./facebook">Facebook</a>
+      </li>
+      <li class="row-item">
+        <img src="images/0006.gif" class="img" alt="" />
+        <a href="./picture-show">Picture Show</a>
+      </li>
+      <li class="row-item">
+        <img src="images/0007.gif" class="img" alt="" />
+        <a href="./starbucks">Starbucks</a>
+      </li>
+      <li class="row-item">
+        <img src="images/0008.gif" class="img" alt="" />
+        <a href="./kfc">KFC</a>
+      </li>
+      <li class="row-item">
+        <img src="images/009.png" class="img" alt="" />
+        <a href="./travel">Travel</a>
+      </li>
+    </ul>
 
-<h2>Logo</h2>
+    <h2 class="title">漂亮设计</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/001.png" class="img" alt="" />
+        <a href="./winter-discount">Winter Discount</a>
+      </li>
+      <li class="row-item">
+        <img src="images/002.png" class="img" alt="" />
+        <a href="./suzuki">Suzuki</a>
+      </li>
+      <li class="row-item">
+        <img src="images/003.png" class="img" alt="" />
+        <a href="./planet-x">Planet X</a>
+      </li>
+      <li class="row-item">
+        <img src="images/004.png" class="img" alt="" />
+        <a href="./member-introduction">Member Introduction</a>
+      </li>
+    </ul>
+    <h2 class="title">音乐播放器</h2>
 
-<a href="./instagram-logo">Instagram Logo</a>
-<br />
-<img src="images/4.gif" width="300" alt="">
-<a href="./twitter-logo">Twitter Logo</a>
-<br />
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/010.gif" class="img" alt="" />
+        <a href="./simple-music-player">Simple Music Player</a>
+      </li>
+      <li class="row-item">
+        <img src="images/011.gif" class="img" alt="" />
+        <a href="./music-player">Music Player</a>
+      </li>
+    </ul>
 
-<h2>进度动画</h2>
-<img src="images/6.gif" width="300" alt="">
-<a href="./progress-animation-001">Progress Animation 001</a>
-<br />
+    <h2 class="title">卡片</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/012.gif" class="img" alt="" />
+        <a href="./bank-card-001">Bank Card 001</a>
+      </li>
+      <li class="row-item">
+        <img src="images/013.png" class="img" alt="" />
+        <a href="./glass-card">Glass Card</a>
+      </li>
+      <li class="row-item">
+        <img src="images/014.png" class="img" alt="" />
+        <a href="./people-card">People Card</a>
+      </li>
+      <li class="row-item">
+        <img src="images/015.png" class="img" alt="" />
+        <a href="./dropdown-menu">Dropdown Menu</a>
+      </li>
+    </ul>
 
-<h2>加载动画</h2>
-<img src="images/3.gif" width="300" alt="">
-<a href="./loading-animation-001">Loading Animation 001</a>
-<br />
-<img src="images/5.gif" width="300" alt="">
-<a href="./loading-animation-002">Loading Animation 002</a>
-<br />
-</body>
+    <h2 class="title">Button</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/016.gif" class="img" alt="" />
+        <a href="./glow-button">Glow Button</a>
+      </li>
+    </ul>
+
+    <h2 class="title">效果</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/017.png" class="img" alt="" /> <a href="./dew">Dew</a>
+      </li>
+      <li class="row-item">
+        <img src="images/018.gif" class="img" alt="" />
+        <a href="./electric-light">Electric Light</a>
+      </li>
+      <li class="row-item">
+        <img src="images/007.gif" class="img" alt="" />
+        <a href="./text-circle-rotate-animations"
+          >text-circle-rotate-animations</a
+        >
+      </li>
+      <li class="row-item">
+        <img src="images/002.gif" class="img" alt="" />
+        <a href="./hover-option">Hover Option</a>
+      </li>
+      <li class="row-item">
+        <img src="images/001.gif" class="img" alt="" />
+        <a href="./sortable-list">Sortable List</a>
+      </li>
+      <li class="row-item">
+        <img src="images/019.png" class="img" alt="" />
+        <a href="./gradient-drop-shadow">Gradient Drop Shadow</a>
+      </li>
+    </ul>
+
+    <h2 class="title">Logo</h2>
+
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/020.png" class="img" alt="" />
+        <a href="./instagram-logo">Instagram Logo</a>
+      </li>
+      <li class="row-item">
+        <img src="images/004.gif" class="img" alt="" />
+        <a href="./twitter-logo">Twitter Logo</a>
+      </li>
+    </ul>
+
+    <h2 class="title">进度动画</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/006.gif" class="img" alt="" />
+        <a href="./progress-animation-001">Progress Animation 001</a>
+      </li>
+    </ul>
+
+    <h2 class="title">加载动画</h2>
+    <ul class="row">
+      <li class="row-item">
+        <img src="images/003.gif" class="img" alt="" />
+        <a href="./loading-animation-001">Loading Animation 001</a>
+      </li>
+      <li class="row-item">
+        <img src="images/005.gif" class="img" alt="" />
+        <a href="./loading-animation-002">Loading Animation 002</a>
+      </li>
+    </ul>
+  </body>
 </html>

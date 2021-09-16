@@ -289,6 +289,9 @@ header {
   .content .text h2 {
     font-size: 3em;
   }
+  .content {
+    margin-bottom: 40px;
+  }
   .btn {
     padding: 15px 30px;
   }
