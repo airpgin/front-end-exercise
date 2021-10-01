@@ -74,6 +74,8 @@ body {
   box-shadow: 0 .5em 0 rgba(0, 0, 0, .1),
   inset 0 -.5em 0 rgba(255, 255, 255, 1);
   z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
 .icon::before {
@@ -102,4 +104,27 @@ body {
 
 .icon ion-icon {
   color: #fff;
+  position: relative;
+  font-size: 6em;
+  z-index: 10000;
+  --ionicon-stroke-width: 24px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  padding-top: 140px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 1.75em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #fff;
+  line-height: 1.5em;
 }
