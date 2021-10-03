@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #000;
+  cursor: context-menu;
+}
+
+section {
+  padding: 40px;
+  color: #666;
+}
+
+section h2 {
+  font-size: 3.5em;
+}
+
+section p {
+  font-size: 1.2em;
+}
+
+#cursorMeter {
+  position: fixed;
+  top: 0;
+  width: 400px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#scrollPath {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #333;
+}
+
+#pregressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to left, #008aff, #00ffe7);
+  animation: animate 5s linear infinite;
+}
+
+#pregressBar::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, #008aff, #00ffe7);
+  filter: blur(10px);
+}
+
+#pregressBar::after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, #008aff, #00ffe7);
+  filter: blur(30px);
+}
+
+@keyframes animate {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+#percent {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 2px 5px;
+  background-color: #fff;
+  color: #333;
+}
