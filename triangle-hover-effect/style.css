@@ -18,24 +18,27 @@ body {
   justify-content: center;
   align-items: center;
   width: 600px;
+  gap: 10px;
 }
 
 .container .card {
   position: relative;
   width: 300px;
   height: 300px;
-  border: 1px solid #ccc;
   overflow: hidden;
-  clip-path: polygon(50%, 0%, 0%, 100%, 100%, 100%);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  margin: 0 -75px;
 }
 
-.container .card .img {
-  transition: .5s;
+.container .card:nth-child(2) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.container .card img {
   width: 300px;
-  height: 300px;
-  background-color: #f90;
+  transition: .5s;
 }
 
-.container .card:hover .img{
+.container .card:hover img{
   transform: scale(1.5);
 }
