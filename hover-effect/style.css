@@ -30,6 +30,7 @@ body {
   position: relative;
   width: 70px;
   height: 70px;
+  z-index: 1;
 }
 
 .navigation ul li a {
@@ -67,4 +68,40 @@ body {
 
 .navigation ul li.active a .text {
   transform: scale(1);
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #f00;
+  border-radius: .7rem;
+  transition: .5s;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  background-color: #f53b57;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  background-color: #5d62fb;
+  box-shadow: 0 15px 25px #5d62fb99;
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  background-color: #05c469;
+  box-shadow: 0 15px 25px #05c46999;
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  background-color: #0fbc69;
+  box-shadow: 0 15px 25px #0fbc6999;
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  background-color: #ffa801;
+  box-shadow: 0 15px 25px #ffa80199;
+  transform: translateX(calc(70px * 4));
 }
